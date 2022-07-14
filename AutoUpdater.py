@@ -29,7 +29,7 @@ def updater():
 
     ghg = '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' # "API KEY"
     username = 'cxsource' # 'USERNAME OF THE OWNER OF THE REPO'
-    repo = 'rbot' # 'NAME OF THE REPO'
+    repo = 'CosBot' # 'NAME OF THE REPO'
 
     def check_version():
         headers = {
