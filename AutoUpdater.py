@@ -24,7 +24,7 @@ name = f"CosphixBot-{getVersion()}.exe"
 
 def updater():
 
-    with open('version.txt') as file:
+    with open(r'C:\Users\Administrator\Desktop\CosBot\version.txt') as file:
         current_version = file.read()
 
     ghg = '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' # "API KEY"
@@ -82,7 +82,7 @@ def updater():
 
             with open(name, 'wb') as f: # 'NAME OF NEW EXE (ONE DOWNLOADING)'
                 f.write(response.content) # writes the new version to the new exe
-            with open("version.txt", "w") as f:
+            with open(r"C:\Users\Administrator\Desktop\CosBot\version.txt", "w") as f:
                 f.write(newest_version) # adds new version number to version.txt
             print("\033[92m[SOFTWARE UPDATE] Successfully downloaded the latest update! Launching now...")
 
