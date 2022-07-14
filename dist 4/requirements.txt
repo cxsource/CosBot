@@ -1,0 +1,8 @@
+# Production
+brotli >= 1.0.9
+cloudscraper >= 1.2.58
+cryptography >= 3.4.7
+Pillow >= 8.2.0
+requests >= 2.25.1
+urllib3 >= 1.26.4
+python-dateutil >= 2.8.1

@@ -1,0 +1,12 @@
+{
+    "License": "4OH1-SWCC-32H7-LF7C",
+    "WebhookURL": "https://discord.com/api/webhooks/978351469147336704/nMcwpFLqsJWsrqiLnkioZ2c2LQK-0vklwcqkjg-Az9gU1z-T_ewmbOyXhthnMmnjUkvA",
+    "CaptchaServices": {
+        "Favorite": "2Captcha",
+        "2Captcha": "8793a27f00aba51877a539f587475ea2",
+        "CapMonster": ["KEY", "KEY"],
+        "AnyCaptcha": ["KEY", "KEY"]
+    },
+
+    "Proxyless": true
+}
