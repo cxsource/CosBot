@@ -372,14 +372,22 @@ def afew_main():
 
         tasksFailed = []
 
-        res = requests.get(row["link"])
-        soup = BeautifulSoup(res.text, 'html.parser')
-        name = soup.find_all('title')[0]
-        title = name.text
-        split_title = title.split('|')
-        product_name = split_title[0]
+        # res = requests.get(row["link"])
+        # soup = BeautifulSoup(res.text, 'html.parser')
+        # name = soup.find_all('title')[0]
+        # title = name.text
+        # split_title = title.split('|')
+        # product_name = split_title[0]
 
         for row in rows_list:
+
+            res = requests.get(row["link"])
+            soup = BeautifulSoup(res.text, 'html.parser')
+            name = soup.find_all('title')[0]
+            title = name.text
+            split_title = title.split('|')
+            product_name = split_title[0]
+
 
             tasknumber = f"{index}/{taskTotal}"
             
@@ -425,6 +433,13 @@ def afew_main():
             index2 = 1
             
             for newrow in tasksFailed:
+
+                res = requests.get(newrow["link"])
+                soup = BeautifulSoup(res.text, 'html.parser')
+                name = soup.find_all('title')[0]
+                title = name.text
+                split_title = title.split('|')
+                product_name = split_title[0]
 
                 tasknumber = f"{index2}/{taskTotal2}"
                 
