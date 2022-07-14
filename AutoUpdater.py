@@ -108,7 +108,7 @@ def updater():
             update()
             exit()
         else:
-            print("\033[92m[UPDATE] Cosphix is already up to date!", end="\r")
+            print("\033[92m[UPDATE] Cosphix is already up to date!")
             
     main()
 
