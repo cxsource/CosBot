@@ -24,7 +24,7 @@ name = f"CosphixBot-{getVersion()}.exe"
 
 def updater():
 
-    with open('./version.txt') as file:
+    with open('version.txt') as file:
         current_version = file.read()
 
     ghg = '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' # "API KEY"
