@@ -65,7 +65,7 @@ class colors1:
 	UNDERLINE = '\033[4m'
 
 def getVersion():
-	version = "0.0.2.1"
+	version = "0.0.2"
 	return version
 	
 console = Console()
