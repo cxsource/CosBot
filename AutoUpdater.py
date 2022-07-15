@@ -70,7 +70,7 @@ def updater():
         data = r.json()
         # print(data)
         for i in data:
-            print(i)
+            # print(i)
             if i['name'] == download_executable:
                 URL = i['download_url']
                 # print(URL)
