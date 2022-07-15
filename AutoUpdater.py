@@ -110,7 +110,7 @@ def updater():
                 print("\033[1;30m[SOFTWARE UPDATE] Downloading the latest update.. ")
                 update()
         except Exception as e:
-            print("\033[91m[UPDATE FAILED] There was an error to get the latest update...")
+            print(f"\033[91m[UPDATE FAILED] There was an error to get the latest update... {e}")
             input()
             exit()
         else:
