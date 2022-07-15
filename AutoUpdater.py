@@ -56,7 +56,7 @@ def updater():
         
     def update():
 
-        download_executable = name # 'CosphixBot.exe' # 'NAME OF EXE IN GITHUB REPO'
+        download_executable = 'CosphixBot.exe' # 'NAME OF EXE IN GITHUB REPO'
 
         headers = {
             "Authorization": "token " + ghg
@@ -73,7 +73,7 @@ def updater():
             # print(i)
             if i['name'] == download_executable:
                 URL = i['download_url']
-                # print(URL)
+                print(URL)
         if URL:
             try:
                 response = requests.get(URL, headers=headers)
