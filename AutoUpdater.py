@@ -20,7 +20,8 @@ from ultilities.logger import logger
 from CLI.main_cli import getVersion
 os.system("")
 
-name = f"CosphixBot-{getVersion()}.exe"
+# name = f"CosphixBot-{getVersion()}.exe"
+name = "CosphixBot.exe"
 
 def updater():
 
