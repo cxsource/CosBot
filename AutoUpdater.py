@@ -98,7 +98,6 @@ def updater():
                 except Exception as e:
                     print("\033[91m[UPDATE FAILED] File doesn't exists")
             # os.startfile(f'THEBOTMacOS') # starts the new exe ## NAME OF NEW EXE (ONE DOWNLOADING -- SAME AS LINE 59 ONE)
-
         else:
             print("\033[91m[UPDATE FAILED] There was an error to get the latest update...")
             exit()
@@ -111,6 +110,7 @@ def updater():
                 print("\033[1;30m[SOFTWARE UPDATE] Downloading the latest update.. ")
                 update()
         except Exception as e:
+            print(e)
             print("\033[91m[UPDATE FAILED] There was an error to get the latest update...".format(str(e)))
             input()
             exit()
