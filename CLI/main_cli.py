@@ -154,7 +154,7 @@ def CLI():
 	setTitle(f"Cosphix Software - Initializating...")
 
 	printHeader()
-	import AutoUpdater
+	# import AutoUpdater
 	auth(getVersion())
 	clearConsole()
 	
