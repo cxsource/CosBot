@@ -28,7 +28,7 @@ exe = EXE(
     a.zipfiles,
     a.datas,
     [],
-    name='CosphixBot-0.0.3',
+    name='CosphixBot',
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,

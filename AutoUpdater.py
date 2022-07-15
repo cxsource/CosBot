@@ -73,7 +73,7 @@ def updater():
             # print(i)
             if i['name'] == download_executable:
                 URL = i['download_url']
-                print(URL)
+                # print(URL)
         if URL:
             try:
                 response = requests.get(URL, headers=headers)
