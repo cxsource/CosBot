@@ -64,7 +64,7 @@ def updater():
         try:
             r = requests.get(f"https://api.github.com/repos/{username}/{repo}/contents", headers=headers)
         except Exception as e:
-            print(f"\033[91m[UPDATE FAILED] There was an error to get the latest update... {e}")
+            print("\033[91m[UPDATE FAILED] Error while connecting to server...".format(str(e)))
             input()
             exit()
         data = r.json()
@@ -79,7 +79,8 @@ def updater():
                 response = requests.get(URL, headers=headers)
                 # print(response.content)
             except Exception as e:
-                print("\033[91m[UPDATE FAILED] There was an error to get the latest update...")
+                print("\033[91m[UPDATE FAILED] Error while connecting to server...".format(str(e)))
+                input()
                 exit()
 
             with open(name, 'wb') as f: # 'NAME OF NEW EXE (ONE DOWNLOADING)'
@@ -110,11 +111,12 @@ def updater():
                 print("\033[1;30m[SOFTWARE UPDATE] Downloading the latest update.. ")
                 update()
         except Exception as e:
-            print(f"\033[91m[UPDATE FAILED] There was an error to get the latest update... {e}")
+            print("\033[91m[UPDATE FAILED] There was an error to get the latest update...".format(str(e)))
             input()
             exit()
         else:
             print("\033[92m[SOFTWARE UPDATE] Cosphix is already up to date!")
+            print()
             
     main()
 
