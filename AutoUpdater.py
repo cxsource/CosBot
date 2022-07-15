@@ -64,7 +64,7 @@ def updater():
         try:
             r = requests.get(f"https://api.github.com/repos/{username}/{repo}/contents", headers=headers)
         except Exception as e:
-            print("\033[91m[UPDATE FAILED] There was an error to get the latest update...")
+            print(f"\033[91m[UPDATE FAILED] There was an error to get the latest update... {e}")
             input()
             exit()
         data = r.json()
