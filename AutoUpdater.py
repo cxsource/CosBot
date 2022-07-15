@@ -70,6 +70,7 @@ def updater():
         data = r.json()
         # print(data)
         for i in data:
+            print(i)
             if i['name'] == download_executable:
                 URL = i['download_url']
                 # print(URL)
@@ -103,10 +104,14 @@ def updater():
 
     def main():
         get_comparison = comparison()
-        if get_comparison == False:
-            print("\033[33m[SOFTWARE UPDATE] New update is available.. ")
-            print("\033[1;30m[SOFTWARE UPDATE] Downloading the latest update.. ")
-            update()
+        try:
+            if get_comparison == False:
+                print("\033[33m[SOFTWARE UPDATE] New update is available.. ")
+                print("\033[1;30m[SOFTWARE UPDATE] Downloading the latest update.. ")
+                update()
+        except Exception as e:
+            print("\033[91m[UPDATE FAILED] There was an error to get the latest update...")
+            input()
             exit()
         else:
             print("\033[92m[SOFTWARE UPDATE] Cosphix is already up to date!")
