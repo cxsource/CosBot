@@ -20,8 +20,8 @@ from ultilities.logger import logger
 from CLI.main_cli import getVersion
 os.system("")
 
-# name = f"CosphixBot-{getVersion()}.exe"
-name = "CosphixBot.exe"
+name = f"CosphixBot-{getVersion()}.exe"
+# name = "CosphixBot.exe"
 
 def updater():
 
@@ -56,8 +56,7 @@ def updater():
         
     def update():
 
-
-        download_executable = 'CosphixBot.exe' # 'NAME OF EXE IN GITHUB REPO'
+        download_executable = name # 'CosphixBot.exe' # 'NAME OF EXE IN GITHUB REPO'
 
         headers = {
             "Authorization": "token " + ghg
@@ -65,7 +64,7 @@ def updater():
         try:
             r = requests.get(f"https://api.github.com/repos/{username}/{repo}/contents", headers=headers)
         except Exception as e:
-            print("\033[91m[UPDATE FAILED] Error while connecting to server...".format(str(e)))
+            print("\033[91m[UPDATE FAILED] Error while connecting to server...{}".format(str(e)))
             input()
             exit()
         data = r.json()
@@ -80,7 +79,7 @@ def updater():
                 response = requests.get(URL, headers=headers)
                 # print(response.content)
             except Exception as e:
-                print("\033[91m[UPDATE FAILED] Error while connecting to server...".format(str(e)))
+                print("\033[91m[UPDATE FAILED] Error while connecting to server... {}".format(str(e)))
                 input()
                 exit()
 
@@ -111,8 +110,7 @@ def updater():
                 print("\033[1;30m[SOFTWARE UPDATE] Downloading the latest update.. ")
                 update()
         except Exception as e:
-            print(e)
-            print("\033[91m[UPDATE FAILED] There was an error to get the latest update...".format(str(e)))
+            print("\033[91m[UPDATE FAILED] There was an error to get the latest update... {}".format(str(e)))
             input()
             exit()
         else:
