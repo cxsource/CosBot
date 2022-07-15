@@ -55,7 +55,8 @@ def updater():
         
     def update():
 
-        download_executable = r'C:\Users\Administrator\Desktop\CosBot\dist\CosphixBot.exe' # 'NAME OF EXE IN GITHUB REPO'
+
+        download_executable = r'CosphixBot.exe' # 'NAME OF EXE IN GITHUB REPO'
 
         headers = {
             "Authorization": "token " + ghg
